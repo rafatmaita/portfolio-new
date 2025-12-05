@@ -139,7 +139,7 @@ export function About({ summary, location }: AboutProps) {
             <GlassCard glow="purple" className="h-full">
               <div className="flex items-start gap-4 mb-4">
                 <div className="p-3 rounded-xl bg-gradient-to-br from-[#8B5CF6]/20 to-[#06B6D4]/20 border border-white/10">
-                  <LineIcon name="terminal" className="w-6 h-6 text-[#8B5CF6]" size="xl" />
+                  <LineIcon name="monitor-code" className="text-[#8B5CF6]" size="xl" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-1">
@@ -158,7 +158,7 @@ export function About({ summary, location }: AboutProps) {
               {/* Code-themed decorative element */}
               <div className="mt-6 pt-4 border-t border-white/10">
                 <div className="flex items-center gap-2 text-white/40 font-mono text-sm">
-                  <LineIcon name="code" size="sm" />
+                  <LineIcon name="code-1" size="sm" />
                   <span>const passion = </span>
                   <span className="text-[#8B5CF6]">&quot;Building the future&quot;</span>
                   <span>;</span>
@@ -175,7 +175,7 @@ export function About({ summary, location }: AboutProps) {
                 <div className="mb-6">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="p-2 rounded-lg bg-gradient-to-br from-[#06B6D4]/20 to-[#8B5CF6]/20 border border-white/10">
-                      <LineIcon name="map-marker" className="text-[#06B6D4]" size="lg" />
+                      <LineIcon name="map-marker-1" className="text-[#06B6D4]" size="lg" />
                     </div>
                     <span className="text-white/50 text-sm font-mono">location</span>
                   </div>
@@ -187,7 +187,7 @@ export function About({ summary, location }: AboutProps) {
                 {/* Decorative code block */}
                 <div className="flex-1 p-4 rounded-xl bg-black/30 border border-white/5 font-mono text-sm">
                   <div className="flex items-center gap-2 mb-3">
-                    <LineIcon name="code-alt" className="text-[#8B5CF6]" size="sm" />
+                    <LineIcon name="code-s" className="text-[#8B5CF6]" size="sm" />
                     <span className="text-white/40">developer.json</span>
                   </div>
                   <div className="space-y-1 text-white/60">

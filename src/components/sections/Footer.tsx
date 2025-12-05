@@ -28,7 +28,7 @@ export function Footer() {
         >
           {/* Built with text - Requirement 8.1 */}
           <div className="flex items-center gap-2 text-gray-400 text-sm font-mono">
-            <LineIcon name="code" className="text-[#8B5CF6]" size="sm" />
+            <LineIcon name="code-1" className="text-[#8B5CF6]" size="sm" />
             <span>Built with</span>
             <span className="text-white">Next.js</span>
             <span>,</span>
@@ -43,7 +43,7 @@ export function Footer() {
             <span>R&apos;AFAT ALMAITA</span>
             <span className="text-gray-600">•</span>
             <span className="flex items-center gap-1">
-              Made with <LineIcon name="heart-filled" className="text-red-500" size="xs" />
+              Made with <LineIcon name="heart" className="text-red-500" size="xs" />
             </span>
           </div>
         </motion.div>

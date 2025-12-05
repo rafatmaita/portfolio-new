@@ -131,7 +131,7 @@ export function ProjectCard({ project, index = 0, prefersReducedMotion = false }
             whileTap={prefersReducedMotion ? {} : { scale: 0.98 }}
           >
             View Details
-            <LineIcon name="link" size="sm" />
+            <LineIcon name="link-2-angular-right" size="sm" />
           </motion.button>
         </div>
 

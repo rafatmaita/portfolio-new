@@ -198,7 +198,7 @@ export function Contact() {
                 </div>
                 <div className="flex-1 text-center">
                   <span className="text-gray-400 text-sm font-mono">
-                    <LineIcon name="terminal" className="inline-block mr-2" size="sm" />
+                    <LineIcon name="monitor-code" className="inline-block mr-2" size="sm" />
                     contact_terminal
                   </span>
                 </div>
@@ -289,7 +289,7 @@ export function Contact() {
                         className="mb-4 p-3 rounded-lg bg-green-500/10 border border-green-500/30"
                       >
                         <div className="flex items-center gap-2 text-green-400">
-                          <LineIcon name="checkmark-circle" size="lg" />
+                          <LineIcon name="check-circle-1" size="lg" />
                           <span className="font-mono text-sm">
                             Message sent successfully! [exit code: 0]
                           </span>
@@ -305,7 +305,7 @@ export function Contact() {
                         className="mb-4 p-3 rounded-lg bg-red-500/10 border border-red-500/30"
                       >
                         <div className="flex items-center gap-2 text-red-400">
-                          <LineIcon name="close" size="lg" />
+                          <LineIcon name="xmark-circle" size="lg" />
                           <span className="font-mono text-sm">
                             Error: Failed to send message. Please try again.
                           </span>
@@ -334,7 +334,7 @@ export function Contact() {
                           </>
                         ) : (
                           <>
-                            <LineIcon name="telegram-original" className="transition-transform group-hover:translate-x-1" size="sm" />
+                            <LineIcon name="telegram" className="transition-transform group-hover:translate-x-1" size="sm" />
                             ./send_message
                           </>
                         )}
@@ -360,7 +360,7 @@ export function Contact() {
             <motion.div variants={itemVariants}>
               <GlassCard glow="cyan" hover={true}>
                 <h3 className="text-xl font-semibold text-white mb-6 flex items-center gap-2">
-                  <LineIcon name="terminal" className="text-[#06B6D4]" size="lg" />
+                  <LineIcon name="monitor-code" className="text-[#06B6D4]" size="lg" />
                   Direct Contact
                 </h3>
                 
@@ -371,7 +371,7 @@ export function Contact() {
                     className="flex items-center gap-4 p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors group"
                   >
                     <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#8B5CF6] to-[#06B6D4] flex items-center justify-center">
-                      <LineIcon name="envelope" className="text-white" size="xl" />
+                      <LineIcon name="envelope-1" className="text-white" size="xl" />
                     </div>
                     <div>
                       <p className="text-gray-400 text-sm font-mono">$ cat email.txt</p>

@@ -9,15 +9,15 @@ import { useReducedMotion } from '@/hooks';
 import type { ExperienceProps, Capability } from '@/types';
 
 /**
- * Icon mapping for capability cards (Lineicons names)
+ * Icon mapping for capability cards (Lineicons v5 names)
  */
 const iconMap: Record<string, string> = {
-  globe: 'world',
-  server: 'server',
-  database: 'database',
-  sparkles: 'star',
-  brain: 'bulb',
-  cpu: 'microchip',
+  globe: 'globe-1',
+  server: 'storage-hdd-2',
+  database: 'database-2',
+  sparkles: 'star-fat',
+  brain: 'bulb-2',
+  cpu: 'gear-1',
 };
 
 /**
@@ -159,7 +159,7 @@ export function Experience({ capabilities: capabilitiesData = capabilities }: Ex
             className="flex items-center gap-3 mb-8"
           >
             <div className="p-2 rounded-lg bg-purple-500/20">
-              <LineIcon name="world" className="text-purple-400" size="lg" />
+              <LineIcon name="globe-1" className="text-purple-400" size="lg" />
             </div>
             <h3 className="text-2xl font-semibold text-white">Full-Stack Development</h3>
             <div className="flex-1 h-px bg-gradient-to-r from-purple-500/50 to-transparent" />
@@ -191,7 +191,7 @@ export function Experience({ capabilities: capabilitiesData = capabilities }: Ex
             className="flex items-center gap-3 mb-8"
           >
             <div className="p-2 rounded-lg bg-cyan-500/20">
-              <LineIcon name="bulb" className="text-cyan-400" size="lg" />
+              <LineIcon name="bulb-2" className="text-cyan-400" size="lg" />
             </div>
             <h3 className="text-2xl font-semibold text-white">AI & Machine Learning</h3>
             <div className="flex-1 h-px bg-gradient-to-r from-cyan-500/50 to-transparent" />

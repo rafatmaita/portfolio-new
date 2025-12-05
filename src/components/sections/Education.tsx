@@ -28,7 +28,7 @@ interface TimelineItemProps {
 function TimelineItem({ item, index, isLast }: TimelineItemProps) {
   const itemRef = useRef<HTMLDivElement>(null);
   const isEven = index % 2 === 0;
-  const iconName = index === 0 ? 'graduation' : 'book';
+  const iconName = index === 0 ? 'graduation-cap-1' : 'book-1';
   const glowColor = isEven ? 'purple' : 'cyan';
 
   return (
@@ -108,7 +108,7 @@ function TimelineItem({ item, index, isLast }: TimelineItemProps) {
           {/* Period if available */}
           {item.period && (
             <div className="flex items-center gap-2 text-gray-400 text-sm">
-              <LineIcon name="calendar" size="sm" />
+              <LineIcon name="calendar-days" size="sm" />
               <span>{item.period}</span>
             </div>
           )}

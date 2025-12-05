@@ -135,7 +135,7 @@ export function Navigation() {
               className="md:hidden p-2 text-white/80 hover:text-white transition-colors"
               aria-label="Toggle menu"
             >
-              {isOpen ? <LineIcon name="close" size="xl" /> : <LineIcon name="menu" size="xl" />}
+              {isOpen ? <LineIcon name="xmark" size="xl" /> : <LineIcon name="menu-hamburger-1" size="xl" />}
             </button>
           </div>
         </div>

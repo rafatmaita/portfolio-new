@@ -5,17 +5,18 @@ import { cn } from '@/lib/utils';
 interface LineIconProps {
   name: string;
   className?: string;
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl';
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
 }
 
 const sizeClasses = {
-  xs: 'text-xs',
-  sm: 'text-sm',
-  md: 'text-base',
-  lg: 'text-lg',
-  xl: 'text-xl',
-  '2xl': 'text-2xl',
-  '3xl': 'text-3xl',
+  xs: 'text-xs',      // 12px
+  sm: 'text-sm',      // 14px
+  md: 'text-lg',      // 18px
+  lg: 'text-xl',      // 20px
+  xl: 'text-2xl',     // 24px (default)
+  '2xl': 'text-3xl',  // 30px
+  '3xl': 'text-4xl',  // 36px
+  '4xl': 'text-5xl',  // 48px
 };
 
 /**
@@ -24,9 +25,9 @@ const sizeClasses = {
  * 
  * @param name - Icon name without 'lni-' prefix (e.g., 'github', 'linkedin', 'envelope')
  * @param className - Additional CSS classes
- * @param size - Predefined size options
+ * @param size - Predefined size options (default: 'xl' = 24px)
  */
-export function LineIcon({ name, className, size = 'md' }: LineIconProps) {
+export function LineIcon({ name, className, size = 'xl' }: LineIconProps) {
   return (
     <i 
       className={cn(

@@ -18,14 +18,14 @@ const Scene = dynamic(() => import('@/components/three/Scene'), {
 });
 const FloatingIcons = dynamic(() => import('@/components/three/FloatingIcons'), { ssr: false });
 
-// Icon mapping for skill categories (Lineicons names)
+// Icon mapping for skill categories (Lineicons v5 names)
 const categoryIcons: Record<string, string> = {
-  code: 'code',
-  layers: 'layers',
-  brain: 'bulb',
-  server: 'server',
-  database: 'database',
-  wrench: 'cog',
+  code: 'code-1',
+  layers: 'layers-1',
+  brain: 'bulb-2',
+  server: 'storage-hdd-2',
+  database: 'database-2',
+  wrench: 'gear-1',
 };
 
 // Glow colors for each category
