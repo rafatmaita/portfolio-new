@@ -46,6 +46,13 @@ export function Footer() {
               Made with <LineIcon name="heart" className="text-red-500" size="xs" />
             </span>
           </div>
+          
+          {/* Arabic name for SEO - visible text ranks better */}
+          <div className="text-gray-600 text-xs mt-2" dir="rtl" lang="ar">
+            <span>رافت المعايطه</span>
+            <span className="mx-2">|</span>
+            <span dir="ltr">Rafat Maita</span>
+          </div>
         </motion.div>
       </div>
     </footer>

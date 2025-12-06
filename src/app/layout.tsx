@@ -16,18 +16,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "R'afat Almaita | Full-Stack Developer & AI Prompt Engineer",
-  description: "Portfolio of R'afat Almaita, a Software Engineer based in Jordan specializing in Next.js, NestJS, and AI Integration. Experienced in building scalable web applications and AI model training.",
-  authors: [{ name: "R'afat Almaita" }],
+  title: {
+    default: "R'afat Almaita (رافت المعايطه) | Full-Stack Developer & AI Prompt Engineer",
+    template: "%s | R'afat Almaita Portfolio",
+  },
+  description: "Portfolio of R'afat Almaita (رافت المعايطه), a Full-Stack Developer and AI Prompt Engineer based in Jordan. Specializing in Next.js, NestJS, and AI Integration. Rafat Maita builds scalable web applications and AI-powered solutions.",
+  authors: [{ name: "R'afat Almaita" }, { name: "رافت المعايطه" }],
   keywords: [
+    "R'afat Almaita",
+    "Rafat Maita",
+    "رافت المعايطه",
+    "رأفت المعايطة",
     "Full-Stack Developer",
     "AI Prompt Engineer",
     "Software Engineer Jordan",
+    "مطور ويب الأردن",
     "Next.js Developer",
     "NestJS",
     "React.js",
     "Web Development",
-    "Rafat Maita",
     "TypeScript",
     "Node.js",
     "MongoDB",
@@ -36,15 +43,16 @@ export const metadata: Metadata = {
   creator: "R'afat Almaita",
   openGraph: {
     type: "website",
-    title: "R'afat Almaita | Full-Stack Developer & AI Prompt Engineer",
-    description: "Portfolio of R'afat Almaita, a Software Engineer based in Jordan specializing in Next.js, NestJS, and AI Integration. Experienced in building scalable web applications and AI model training.",
+    title: "R'afat Almaita (رافت المعايطه) | Full-Stack Developer & AI Prompt Engineer",
+    description: "Portfolio of R'afat Almaita (رافت المعايطه), a Full-Stack Developer and AI Prompt Engineer based in Jordan. Specializing in Next.js, NestJS, and AI Integration.",
     siteName: "R'afat Almaita Portfolio",
     locale: "en_US",
+    alternateLocale: "ar_JO",
   },
   twitter: {
     card: "summary_large_image",
-    title: "R'afat Almaita | Full-Stack Developer & AI Prompt Engineer",
-    description: "Portfolio of R'afat Almaita, a Software Engineer based in Jordan specializing in Next.js, NestJS, and AI Integration.",
+    title: "R'afat Almaita (رافت المعايطه) | Full-Stack Developer",
+    description: "Portfolio of R'afat Almaita (رافت المعايطه), a Full-Stack Developer and AI Prompt Engineer based in Jordan.",
   },
   robots: {
     index: true,
@@ -57,6 +65,12 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  alternates: {
+    languages: {
+      'en': '/',
+      'ar': '/',
+    },
+  },
 };
 
 export const viewport: Viewport = {
@@ -66,24 +80,35 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-// JSON-LD Schema for SEO
+// JSON-LD Schema for SEO - Enhanced for multilingual name search
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "R'afat Almaita",
+  alternateName: ["Rafat Maita", "رافت المعايطه", "رأفت المعايطة", "Rafat Almaita"],
   jobTitle: "Full-Stack Web Developer | AI Prompt Engineer",
   description: "Full-stack web developer skilled in Node.js, TypeScript, Python, ASP.NET, and React.js, with experience building scalable applications using MongoDB and PostgreSQL.",
   url: "https://rafatalmaita.com",
   email: "rafatmaita2030@gmail.com",
   telephone: "+962-795721257",
+  image: "https://rafatalmaita.com/profile.jpg", // Add your profile image URL
   address: {
     "@type": "PostalAddress",
     addressLocality: "Zarqa",
-    addressCountry: "Jordan",
+    addressRegion: "Zarqa Governorate",
+    addressCountry: "JO",
+  },
+  nationality: {
+    "@type": "Country",
+    name: "Jordan",
   },
   sameAs: [
-    "https://linkedin.com/in/rafatmaita",
-    "https://github.com/rafatalmaita",
+    "https://www.linkedin.com/in/rafat-maita/",
+    "https://github.com/rafatmaita",
+    // Add more profiles here to strengthen Knowledge Graph:
+    // "https://twitter.com/rafatmaita",
+    // "https://stackoverflow.com/users/YOUR_ID",
+    // "https://dev.to/rafatmaita",
   ],
   knowsAbout: [
     "Full-Stack Development",
@@ -96,6 +121,7 @@ const jsonLd = {
     "MongoDB",
     "PostgreSQL",
   ],
+  knowsLanguage: ["en", "ar"],
 };
 
 export default function RootLayout({
