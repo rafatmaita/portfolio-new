@@ -53,9 +53,9 @@ function SkillCategoryCard({ category, index, prefersReducedMotion = false }: Sk
     <motion.div variants={itemVariants}>
       <GlassCard glow={glow} className="h-full">
         {/* Category Header */}
-        <div className="flex items-center gap-3 mb-6">
+        <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
           <div className={`
-            p-2 rounded-lg
+            w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex-shrink-0 flex items-center justify-center
             ${glow === 'purple' ? 'bg-purple-500/20 text-purple-400' : ''}
             ${glow === 'blue' ? 'bg-blue-500/20 text-blue-400' : ''}
             ${glow === 'cyan' ? 'bg-cyan-500/20 text-cyan-400' : ''}
@@ -63,7 +63,7 @@ function SkillCategoryCard({ category, index, prefersReducedMotion = false }: Sk
             <LineIcon name={iconName} size="xl" />
           </div>
           <h3 className={`
-            text-xl font-semibold
+            text-lg sm:text-xl font-semibold
             ${glow === 'purple' ? 'text-purple-300' : ''}
             ${glow === 'blue' ? 'text-blue-300' : ''}
             ${glow === 'cyan' ? 'text-cyan-300' : ''}
@@ -74,7 +74,7 @@ function SkillCategoryCard({ category, index, prefersReducedMotion = false }: Sk
 
         {/* Glowing Divider */}
         <div className={`
-          h-px mb-6 opacity-50
+          h-px mb-4 sm:mb-6 opacity-50
           ${glow === 'purple' ? 'bg-gradient-to-r from-transparent via-purple-500 to-transparent' : ''}
           ${glow === 'blue' ? 'bg-gradient-to-r from-transparent via-blue-500 to-transparent' : ''}
           ${glow === 'cyan' ? 'bg-gradient-to-r from-transparent via-cyan-500 to-transparent' : ''}
@@ -82,7 +82,7 @@ function SkillCategoryCard({ category, index, prefersReducedMotion = false }: Sk
 
         {/* Skills List */}
         {/* Respects reduced motion preference (Requirement 10.4) */}
-        <ul className="space-y-3">
+        <ul className="space-y-2 sm:space-y-3">
           {category.skills.map((skill, skillIndex) => (
             <motion.li
               key={skill}
@@ -123,7 +123,7 @@ export function Skills({ categories = skillCategories }: SkillsProps) {
   return (
     <section
       id="skills"
-      className="relative min-h-screen py-24 px-4 md:px-8 overflow-hidden"
+      className="relative min-h-screen py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 overflow-hidden"
     >
       {/* 3D Floating Icons Background - Requirements: 3.2 */}
       {/* Only render 3D scene if user doesn't prefer reduced motion (Requirement 10.4) */}
@@ -145,7 +145,7 @@ export function Skills({ categories = skillCategories }: SkillsProps) {
         {/* Skills Grid - Requirements: 3.1, 3.3 */}
         {/* Respects reduced motion preference (Requirement 10.4) */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"

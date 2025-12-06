@@ -34,24 +34,24 @@ function TimelineItem({ item, index, isLast }: TimelineItemProps) {
   return (
     <div
       ref={itemRef}
-      className="timeline-item relative flex items-center gap-8 md:gap-12"
+      className="timeline-item relative"
     >
-      {/* Timeline connector line */}
+      {/* Timeline connector line - hidden on mobile */}
       {!isLast && (
         <div
-          className="timeline-line absolute left-[23px] md:left-1/2 top-16 w-0.5 h-[calc(100%+2rem)] -translate-x-1/2"
+          className="timeline-line absolute hidden md:block left-1/2 top-16 w-0.5 h-[calc(100%+2rem)] -translate-x-1/2"
           style={{
             background: `linear-gradient(180deg, ${isEven ? 'rgba(139, 92, 246, 0.5)' : 'rgba(6, 182, 212, 0.5)'} 0%, ${!isEven ? 'rgba(139, 92, 246, 0.3)' : 'rgba(6, 182, 212, 0.3)'} 100%)`,
           }}
         />
       )}
 
-      {/* Timeline node/dot */}
+      {/* Timeline node/dot - hidden on mobile */}
       <div
         className={`
-          timeline-node absolute left-0 md:left-1/2 z-10
-          w-12 h-12 rounded-full flex items-center justify-center
-          -translate-x-0 md:-translate-x-1/2
+          timeline-node absolute hidden md:flex left-1/2 z-10
+          w-12 h-12 rounded-full items-center justify-center
+          -translate-x-1/2
           ${isEven
             ? 'bg-gradient-to-br from-purple-500/30 to-pink-500/30 text-purple-400 border border-purple-500/50'
             : 'bg-gradient-to-br from-cyan-500/30 to-blue-500/30 text-cyan-400 border border-cyan-500/50'
@@ -67,10 +67,10 @@ function TimelineItem({ item, index, isLast }: TimelineItemProps) {
         <LineIcon name={iconName} size="lg" />
       </div>
 
-      {/* Content card - alternating sides on desktop */}
+      {/* Content card - full width on mobile, alternating sides on desktop */}
       <div
         className={`
-          ml-16 md:ml-0 md:w-[calc(50%-3rem)]
+          w-full md:w-[calc(50%-3rem)]
           ${isEven ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'}
         `}
       >
@@ -92,7 +92,7 @@ function TimelineItem({ item, index, isLast }: TimelineItemProps) {
           {/* Institution name */}
           <h3
             className={`
-              text-xl md:text-2xl font-bold mb-2
+              text-lg sm:text-xl md:text-2xl font-bold mb-2
               ${isEven ? 'text-purple-200' : 'text-cyan-200'}
               group-hover:text-white transition-colors duration-300
             `}
@@ -101,7 +101,7 @@ function TimelineItem({ item, index, isLast }: TimelineItemProps) {
           </h3>
 
           {/* Program */}
-          <p className="text-gray-300 text-lg mb-3">
+          <p className="text-gray-300 text-base sm:text-lg mb-3">
             {item.program}
           </p>
 
@@ -259,7 +259,7 @@ export function Education({ items = education }: EducationProps) {
     <section
       id="education"
       ref={sectionRef}
-      className="relative py-24 md:py-32 overflow-hidden"
+      className="relative py-16 sm:py-20 md:py-24 lg:py-32 overflow-hidden"
     >
       {/* Background gradient effects */}
       <div className="absolute inset-0 pointer-events-none">
@@ -279,7 +279,7 @@ export function Education({ items = education }: EducationProps) {
         />
       </div>
 
-      <div className="container mx-auto px-4 max-w-5xl relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 max-w-5xl relative z-10">
         <SectionHeading
           title="Education"
           subtitle="Academic foundation and professional training"

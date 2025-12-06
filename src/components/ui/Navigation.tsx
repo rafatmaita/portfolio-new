@@ -86,8 +86,8 @@ export function Navigation() {
         transition={{ duration: prefersReducedMotion ? 0.01 : 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? 'bg-[#0A0A0F]/80 backdrop-blur-xl border-b border-white/10'
-            : 'bg-transparent'
+            ? 'bg-white/5 backdrop-blur-2xl border-b border-white/10 shadow-lg shadow-purple-500/5'
+            : 'bg-white/[0.02] backdrop-blur-md'
         }`}
       >
         <div className="container mx-auto px-4 max-w-6xl">
@@ -164,7 +164,7 @@ export function Navigation() {
               animate={{ x: 0 }}
               exit={{ x: prefersReducedMotion ? 0 : '100%' }}
               transition={prefersReducedMotion ? { duration: 0.01 } : { type: 'spring', stiffness: 300, damping: 30 }}
-              className="absolute top-0 right-0 bottom-0 w-64 bg-[#0A0A0F]/95 backdrop-blur-xl border-l border-white/10"
+              className="absolute top-0 right-0 bottom-0 w-64 bg-white/5 backdrop-blur-2xl border-l border-white/10 shadow-xl"
             >
               <div className="flex flex-col pt-20 px-6">
                 {navigationLinks.map((link, index) => {

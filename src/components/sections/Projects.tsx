@@ -26,7 +26,7 @@ export function Projects({ projects: projectsData = projects }: ProjectsProps) {
   return (
     <section
       id="projects"
-      className="relative min-h-screen py-24 px-4 md:px-8 overflow-hidden"
+      className="relative min-h-screen py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 overflow-hidden"
     >
       {/* Content Container */}
       <div className="relative z-10 max-w-6xl mx-auto">
@@ -38,7 +38,7 @@ export function Projects({ projects: projectsData = projects }: ProjectsProps) {
         {/* Projects Grid */}
         {/* Respects reduced motion preference (Requirement 10.4) */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"

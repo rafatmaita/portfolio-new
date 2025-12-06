@@ -49,7 +49,7 @@ function CapabilityCard({ capability, prefersReducedMotion = false }: Omit<Capab
         {/* Respects reduced motion preference (Requirement 10.4) */}
         <motion.div 
           className={`
-            inline-flex p-3 rounded-xl mb-4
+            w-12 h-12 flex items-center justify-center rounded-xl mb-4
             ${isAI 
               ? 'bg-gradient-to-br from-cyan-500/20 to-blue-500/20 text-cyan-400' 
               : 'bg-gradient-to-br from-purple-500/20 to-pink-500/20 text-purple-400'
@@ -123,7 +123,7 @@ export function Experience({ capabilities: capabilitiesData = capabilities }: Ex
     <section
       id="experience"
       ref={sectionRef}
-      className="relative py-24 md:py-32 overflow-hidden"
+      className="relative py-16 sm:py-20 md:py-24 lg:py-32 overflow-hidden"
     >
       {/* Background gradient effects */}
       <div className="absolute inset-0 pointer-events-none">
@@ -143,30 +143,30 @@ export function Experience({ capabilities: capabilitiesData = capabilities }: Ex
         />
       </div>
 
-      <div className="container mx-auto px-4 max-w-6xl relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 max-w-6xl relative z-10">
         <SectionHeading
           title="Experience & Capabilities"
           subtitle="Bridging full-stack development with cutting-edge AI technologies"
         />
 
         {/* Full-Stack Capabilities - Requirements: 4.1, 4.3 */}
-        <div className="mb-16">
+        <div className="mb-10 sm:mb-12 md:mb-16">
           {/* Respects reduced motion preference (Requirement 10.4) */}
           <motion.div
             initial={{ opacity: prefersReducedMotion ? 1 : 0, x: prefersReducedMotion ? 0 : -20 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: prefersReducedMotion ? 1 : 0, x: prefersReducedMotion ? 0 : -20 }}
             transition={{ duration: prefersReducedMotion ? 0.01 : 0.5 }}
-            className="flex items-center gap-3 mb-8"
+            className="flex items-center gap-2 sm:gap-3 mb-6 sm:mb-8"
           >
-            <div className="p-2 rounded-lg bg-purple-500/20">
+            <div className="w-10 h-10 rounded-lg bg-purple-500/20 flex-shrink-0 flex items-center justify-center">
               <LineIcon name="globe-1" className="text-purple-400" size="lg" />
             </div>
-            <h3 className="text-2xl font-semibold text-white">Full-Stack Development</h3>
-            <div className="flex-1 h-px bg-gradient-to-r from-purple-500/50 to-transparent" />
+            <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">Full-Stack Development</h3>
+            <div className="flex-1 h-px bg-gradient-to-r from-purple-500/50 to-transparent hidden sm:block" />
           </motion.div>
 
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-3 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
             variants={containerVariants}
             initial="hidden"
             animate={isInView ? 'visible' : 'hidden'}
@@ -188,17 +188,17 @@ export function Experience({ capabilities: capabilitiesData = capabilities }: Ex
             initial={{ opacity: prefersReducedMotion ? 1 : 0, x: prefersReducedMotion ? 0 : -20 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: prefersReducedMotion ? 1 : 0, x: prefersReducedMotion ? 0 : -20 }}
             transition={{ duration: prefersReducedMotion ? 0.01 : 0.5, delay: prefersReducedMotion ? 0 : 0.3 }}
-            className="flex items-center gap-3 mb-8"
+            className="flex items-center gap-2 sm:gap-3 mb-6 sm:mb-8"
           >
-            <div className="p-2 rounded-lg bg-cyan-500/20">
+            <div className="w-10 h-10 rounded-lg bg-cyan-500/20 flex-shrink-0 flex items-center justify-center">
               <LineIcon name="bulb-2" className="text-cyan-400" size="lg" />
             </div>
-            <h3 className="text-2xl font-semibold text-white">AI & Machine Learning</h3>
-            <div className="flex-1 h-px bg-gradient-to-r from-cyan-500/50 to-transparent" />
+            <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">AI & Machine Learning</h3>
+            <div className="flex-1 h-px bg-gradient-to-r from-cyan-500/50 to-transparent hidden sm:block" />
           </motion.div>
 
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-3 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
             variants={containerVariants}
             initial="hidden"
             animate={isInView ? 'visible' : 'hidden'}

@@ -169,7 +169,7 @@ export function Hero({ name, titles, ctaButtons }: HeroProps) {
           {/* Name Typography (Requirement 1.1) */}
           <h1
             ref={nameRef}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight"
+            className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight px-2"
             style={{ perspective: '1000px' }}
           >
             <span className="gradient-text">{nameChars}</span>
@@ -177,7 +177,7 @@ export function Hero({ name, titles, ctaButtons }: HeroProps) {
 
           {/* Animated Role Titles (Requirement 1.2) */}
           {/* Respects reduced motion preference (Requirement 10.4) */}
-          <div className="h-12 sm:h-14 md:h-16 relative overflow-hidden">
+          <div className="h-10 sm:h-12 md:h-14 lg:h-16 relative overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.p
                 key={currentTitleIndex}
@@ -185,7 +185,7 @@ export function Hero({ name, titles, ctaButtons }: HeroProps) {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: prefersReducedMotion ? 0 : -30 }}
                 transition={{ duration: prefersReducedMotion ? 0.01 : 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
-                className="text-xl sm:text-2xl md:text-3xl text-white/80 font-light absolute inset-0 flex items-center justify-center"
+                className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-white/80 font-light absolute inset-0 flex items-center justify-center px-4"
               >
                 <span className="inline-flex items-center gap-2">
                   <span 

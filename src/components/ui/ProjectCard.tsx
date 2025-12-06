@@ -63,7 +63,7 @@ export function ProjectCard({ project, index = 0, prefersReducedMotion = false }
       }}
     >
       <div className={`
-        relative rounded-2xl overflow-hidden
+        relative rounded-xl sm:rounded-2xl overflow-hidden
         bg-white/5 backdrop-blur-xl
         border border-white/10
         shadow-[0_0_20px_rgba(139,92,246,0.2)]
@@ -72,7 +72,7 @@ export function ProjectCard({ project, index = 0, prefersReducedMotion = false }
       `}>
         {/* Gradient Placeholder Image */}
         <div className={`
-          relative h-48 w-full overflow-hidden
+          relative h-36 sm:h-40 md:h-48 w-full overflow-hidden
           bg-gradient-to-br ${project.gradient}
         `}>
           {/* Animated overlay on hover */}
@@ -89,23 +89,23 @@ export function ProjectCard({ project, index = 0, prefersReducedMotion = false }
         </div>
 
         {/* Content */}
-        <div className="p-6">
+        <div className="p-4 sm:p-5 md:p-6">
           {/* Title */}
-          <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-purple-300 transition-colors">
+          <h3 className="text-lg sm:text-xl font-semibold text-white mb-2 sm:mb-3 group-hover:text-purple-300 transition-colors">
             {project.title}
           </h3>
 
           {/* Description */}
-          <p className="text-gray-400 text-sm leading-relaxed mb-4 line-clamp-3">
+          <p className="text-gray-400 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 line-clamp-3">
             {project.description}
           </p>
 
           {/* Tech Stack */}
-          <div className="flex flex-wrap gap-2 mb-5">
+          <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4 sm:mb-5">
             {project.techStack.map((tech) => (
               <span
                 key={tech}
-                className="px-3 py-1 text-xs font-medium rounded-full
+                className="px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-xs font-medium rounded-full
                   bg-white/5 text-gray-300 border border-white/10
                   hover:bg-white/10 hover:border-purple-500/30 transition-colors"
               >
@@ -118,8 +118,8 @@ export function ProjectCard({ project, index = 0, prefersReducedMotion = false }
           {/* Respects reduced motion preference (Requirement 10.4) */}
           <motion.button
             className={`
-              inline-flex items-center gap-2 px-4 py-2
-              text-sm font-medium text-white
+              inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2
+              text-xs sm:text-sm font-medium text-white
               bg-gradient-to-r from-purple-500 to-blue-500
               rounded-lg
               hover:from-purple-600 hover:to-blue-600

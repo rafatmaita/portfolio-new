@@ -19,7 +19,7 @@ export function GlassCard({
   return (
     <motion.div
       className={`
-        relative rounded-2xl p-6
+        relative rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6
         bg-white/5 backdrop-blur-xl
         border border-white/10
         ${glowStyles[glow]}

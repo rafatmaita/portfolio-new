@@ -167,7 +167,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="relative min-h-screen py-24 px-4 sm:px-6 lg:px-8"
+      className="relative min-h-screen py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8"
     >
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#8B5CF6]/5 to-transparent pointer-events-none" />
@@ -179,7 +179,7 @@ export function Contact() {
           align="center"
         />
         
-        <div className="grid lg:grid-cols-2 gap-12 mt-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 mt-10 sm:mt-12 md:mt-16">
           {/* Contact Form - Terminal Style */}
           {/* Respects reduced motion preference (Requirement 10.4) */}
           <motion.div
@@ -359,7 +359,7 @@ export function Contact() {
             {/* Direct Contact Card */}
             <motion.div variants={itemVariants}>
               <GlassCard glow="cyan" hover={true}>
-                <h3 className="text-xl font-semibold text-white mb-6 flex items-center gap-2">
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-4 sm:mb-6 flex items-center gap-2">
                   <LineIcon name="monitor-code" className="text-[#06B6D4]" size="lg" />
                   Direct Contact
                 </h3>
@@ -368,14 +368,14 @@ export function Contact() {
                   {/* Email */}
                   <a
                     href={`mailto:${personalInfo.email}`}
-                    className="flex items-center gap-4 p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors group"
+                    className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors group"
                   >
-                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#8B5CF6] to-[#06B6D4] flex items-center justify-center">
-                      <LineIcon name="envelope-1" className="text-white" size="xl" />
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0 rounded-lg bg-gradient-to-br from-[#8B5CF6] to-[#06B6D4] flex items-center justify-center">
+                      <LineIcon name="envelope-1" className="text-white" size="lg" />
                     </div>
-                    <div>
-                      <p className="text-gray-400 text-sm font-mono">$ cat email.txt</p>
-                      <p className="text-white group-hover:text-[#8B5CF6] transition-colors">
+                    <div className="min-w-0 flex-1">
+                      <p className="text-gray-400 text-xs sm:text-sm font-mono">$ cat email.txt</p>
+                      <p className="text-white group-hover:text-[#8B5CF6] transition-colors text-sm sm:text-base truncate">
                         {personalInfo.email}
                       </p>
                     </div>
@@ -384,14 +384,14 @@ export function Contact() {
                   {/* Phone */}
                   <a
                     href={`tel:${personalInfo.phone}`}
-                    className="flex items-center gap-4 p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors group"
+                    className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors group"
                   >
-                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#06B6D4] to-[#8B5CF6] flex items-center justify-center">
-                      <LineIcon name="phone" className="text-white" size="xl" />
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0 rounded-lg bg-gradient-to-br from-[#06B6D4] to-[#8B5CF6] flex items-center justify-center">
+                      <LineIcon name="phone" className="text-white" size="lg" />
                     </div>
-                    <div>
-                      <p className="text-gray-400 text-sm font-mono">$ cat phone.txt</p>
-                      <p className="text-white group-hover:text-[#06B6D4] transition-colors">
+                    <div className="min-w-0 flex-1">
+                      <p className="text-gray-400 text-xs sm:text-sm font-mono">$ cat phone.txt</p>
+                      <p className="text-white group-hover:text-[#06B6D4] transition-colors text-sm sm:text-base">
                         {personalInfo.phone}
                       </p>
                     </div>

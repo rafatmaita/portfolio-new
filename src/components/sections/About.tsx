@@ -33,7 +33,7 @@ export function About({ summary, location }: AboutProps) {
     <section
       id="about"
       ref={sectionRef}
-      className="relative py-24 md:py-32 overflow-hidden"
+      className="relative py-16 sm:py-20 md:py-24 lg:py-32 overflow-hidden"
     >
       {/* Code-themed background animations (Requirement 2.3) */}
       {/* Respects reduced motion preference (Requirement 10.4) */}
@@ -119,7 +119,7 @@ export function About({ summary, location }: AboutProps) {
         />
       </div>
 
-      <div className="container mx-auto px-4 max-w-5xl relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 max-w-5xl relative z-10">
         {/* Section Heading with motion reveal (Requirement 2.1) */}
         <SectionHeading
           title="About Me"
@@ -132,13 +132,13 @@ export function About({ summary, location }: AboutProps) {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
-          className="grid md:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8"
         >
           {/* Main Summary Card (Requirement 2.2) */}
           <motion.div variants={itemVariants} className="md:col-span-2">
             <GlassCard glow="purple" className="h-full">
               <div className="flex items-start gap-4 mb-4">
-                <div className="p-3 rounded-xl bg-gradient-to-br from-[#8B5CF6]/20 to-[#06B6D4]/20 border border-white/10">
+                <div className="w-12 h-12 flex-shrink-0 rounded-xl bg-gradient-to-br from-[#8B5CF6]/20 to-[#06B6D4]/20 border border-white/10 flex items-center justify-center">
                   <LineIcon name="monitor-code" className="text-[#8B5CF6]" size="xl" />
                 </div>
                 <div>
@@ -174,7 +174,7 @@ export function About({ summary, location }: AboutProps) {
                 {/* Location Display */}
                 <div className="mb-6">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="p-2 rounded-lg bg-gradient-to-br from-[#06B6D4]/20 to-[#8B5CF6]/20 border border-white/10">
+                    <div className="w-10 h-10 flex-shrink-0 rounded-lg bg-gradient-to-br from-[#06B6D4]/20 to-[#8B5CF6]/20 border border-white/10 flex items-center justify-center">
                       <LineIcon name="map-marker-1" className="text-[#06B6D4]" size="lg" />
                     </div>
                     <span className="text-white/50 text-sm font-mono">location</span>
